@@ -1,7 +1,7 @@
 from django.db import models
 
 from django.db import models
-from shop.models import Product
+from Shop.models import Product
 
 
 class Order(models.Model):
@@ -14,7 +14,7 @@ class Order(models.Model):
 	paid = models.BooleanField(default=False)
 
 	class Meta:
-		ordering = ('-created', )
+		ordering = ('-created_at', )
 
 	def __str__(self):
 		return 'Order {}'.format(self.id)
