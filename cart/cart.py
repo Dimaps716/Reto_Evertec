@@ -9,7 +9,7 @@ class Cart(object):
 		cart = self.session.get(settings.CART_SESSION_ID)
 		if not cart:
 			cart = self.session[settings.CART_SESSION_ID] = {}
-		self.cart = cart
+		self.cart = cart 
 
 	def add(self, product, quantity=1, update_quantity=False):
 		product_id = str(product.id)
@@ -41,6 +41,7 @@ class Cart(object):
 			item['price'] = Decimal(item['price'])
 			item['total_price'] = item['price'] * item['quantity']
 			yield item
+
 
 	def __len__(self):
 		return sum(item['quantity'] for item in self.cart.values())

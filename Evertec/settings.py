@@ -143,5 +143,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '/Shop//static//static/')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'products/')
+MEDIA_ROOT = os.path.join(BASE_DIR, '/img/')
 CART_SESSION_ID = ''
